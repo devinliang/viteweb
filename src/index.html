@@ -1,17 +1,341 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap with Vite</title>
-        <script type="module" src="./js/main.js"></script>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文藻小咖啡 - 校園中的安靜角落</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     </head>
-<body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <p>11121xxxdx MMMEEE</p>
-    
-    <button class="btn btn-primary">Primary button</button>
-</div>
-</body>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">文藻小咖啡 Wenzao Cafe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">菜單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://picsum.photos/seed/cafe1/1920/800');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 fw-bold">歡迎來到 文藻小咖啡</h1>
+                    <p class="lead">校園中的安靜角落，一杯咖啡，一段沉靜時光。</p>
+                    <a href="#menu" class="btn btn-primary btn-lg mt-3">探索我們的菜單</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://picsum.photos/seed/cafe2/1920/800');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 fw-bold">你的專屬學習空間</h1>
+                    <p class="lead">在這裡，你可以享受一杯咖啡，沉浸在書本的世界。</p>
+                    <a href="#about" class="btn btn-secondary btn-lg mt-3">了解更多</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://picsum.photos/seed/cafe3/1920/800');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 fw-bold">品味每一滴的醇厚</h1>
+                    <p class="lead">嚴選咖啡豆，為您帶來最美好的味覺體驗。</p>
+                    <a href="#menu" class="btn btn-success btn-lg mt-3">立即選購</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://picsum.photos/seed/cafe4/1920/800');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 fw-bold">搭配輕食，更添滿足</h1>
+                    <p class="lead">多樣化的小點心，讓您的咖啡時光更加完整。</p>
+                    <a href="#menu" class="btn btn-warning text-dark btn-lg mt-3">查看點心</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://picsum.photos/seed/cafe5/1920/800');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 fw-bold">友誼，從一杯咖啡開始</h1>
+                    <p class="lead">與好友共享美好時光，留下難忘回憶。</p>
+                    <a href="#contact" class="btn btn-info btn-lg mt-3">預約訂位</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <section id="about" class="container py-5">
+        <h2 class="text-center mb-4 text-primary">關於 文藻小咖啡</h2>
+        <hr class="mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <p>「文藻小咖啡」座落在充滿書香氣息的文藻校園內，我們相信，在忙碌的學術生活中，每個人都需要一個喘息的空間。我們提供的不僅是一杯咖啡，更是一個可以專注閱讀、安靜思考或與朋友輕聲交談的避風港。</p>
+                <p>我們的特色是：</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">☕ **靜謐的環境**：特別設計的空間，適合讀書、寫報告。</li>
+                    <li class="list-group-item">🥤 **多樣化飲品**：從經典義式咖啡到創意特調、花草茶，應有盡有。</li>
+                    <li class="list-group-item">🎓 **校園限定優惠**：專屬文藻師生的飲品折扣與套餐。</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <img src="https://picsum.photos/seed/456/500/350" class="img-fluid rounded shadow" alt="學生在咖啡店安靜讀書">
+            </div>
+        </div>
+    </section>
+
+<section class="py-5 overflow-visible">
+        <div class="container my-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 position-relative">
+                    <div class="image-stack-container pe-md-5 pb-md-5">
+                        <img src="https://picsum.photos/seed/cafe_building/600/700" class="img-fluid rounded-4 shadow w-100 object-fit-cover" style="min-height: 500px;" alt="文藻小咖啡外觀">
+                        
+                        <div class="position-absolute top-50 start-0 translate-middle-y ms-n3 bg-secondary text-white p-3 rounded-3 shadow d-none d-md-block" style="z-index: 3;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-white bg-opacity-25 p-2 rounded-circle">
+                                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="m-0 fw-bold">4.9 星好評</h6>
+                                    <small class="text-white-50">校園首選</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="https://picsum.photos/seed/cafe_interior/400/300" class="position-absolute bottom-0 end-0 rounded-4 shadow border border-4 border-white d-none d-md-block" style="width: 55%; z-index: 2;" alt="舒適的室內空間">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h6 class="text-secondary fw-bold text-uppercase letter-spacing-2">Quality & Atmosphere</h6>
+                    <h2 class="display-5 fw-bold mb-4 text-dark">探索校園內的<br>極致咖啡體驗</h2>
+                    <p class="text-muted lead mb-5">文藻小咖啡致力於打造一個融合人文氣息與現代舒適的空間。無論是課間的短暫休憩，還是午後的深度閱讀，這裡都能滿足您對品質的堅持。</p>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-light text-primary rounded-3 p-3">
+                                        <i class="bi bi-cup-hot-fill fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">嚴選豆種</h5>
+                                    <p class="text-muted small">使用 100% 阿拉比卡精品豆</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-light text-primary rounded-3 p-3">
+                                        <i class="bi bi-trophy-fill fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">金牌服務</h5>
+                                    <p class="text-muted small">受過專業訓練的咖啡師團隊</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-light text-primary rounded-3 p-3">
+                                        <i class="bi bi-geo-alt-fill fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">核心位置</h5>
+                                    <p class="text-muted small">位於圖書館旁，充滿書香氣息</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="bg-light text-primary rounded-3 p-3">
+                                        <i class="bi bi-heart-fill fs-4"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">手作溫度</h5>
+                                    <p class="text-muted small">每日限量供應的手作甜點</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="btn btn-primary btn-lg rounded-pill px-4 py-2">
+                        探索我們的故事 <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="menu" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-primary">精選飲品推薦</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <img src="https://picsum.photos/seed/111/400/250" class="card-img-top" alt="經典拿鐵"> 
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-secondary">經典拿鐵</h5>
+                            <p class="card-text text-muted">義式濃縮與香醇牛奶的完美結合，帶給你一整天的溫暖與活力。</p>
+                            <span class="badge bg-primary fs-6">NT$ 75</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <img src="https://picsum.photos/seed/222/400/250" class="card-img-top" alt="文藻特調冷萃">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-secondary">文藻特調冷萃</h5>
+                            <p class="card-text text-muted">耗時 12 小時低溫萃取，口感清爽、風味濃郁，適合炎熱的高雄。</p>
+                            <span class="badge bg-secondary fs-6">NT$ 80</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <img src="https://picsum.photos/seed/333/400/250" class="card-img-top" alt="安神花草茶">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-secondary">安神花草茶</h5>
+                            <p class="card-text text-muted">無咖啡因選擇，多種花草配方，幫助您在考前放鬆心情，保持專注。</p>
+                            <span class="badge bg-success fs-6">NT$ 65</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-primary">下載完整菜單 PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5">
+        <h2 class="text-center mb-4 text-primary">營業資訊與聯絡我們</h2>
+        <hr class="mb-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h4 class="card-title text-secondary">📍 我們的地點</h4>
+                        <p class="fw-bold">地點：</p>
+                        <p>文藻外語大學 校園內 (詳細位置請洽行政大樓旁)</p>
+                        <p class="fw-bold">營業時間：</p>
+                        <p>週一至週五：<span class="text-primary">09:00 - 18:00</span></p>
+                        <p>例假日及寒暑假：請參閱最新校園公告</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h4 class="card-title text-secondary">✉️ 聯絡方式</h4>
+                        <p class="fw-bold">電子郵件：</p>
+                        <p>wenzaocafe@email.com</p>
+                        <p class="fw-bold">校內訂購專線：</p>
+                        <p class="display-6 text-success">分機 1234</p>
+                        <p class="text-muted small">歡迎校內師生提前預訂大宗飲品。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="py-5 bg-light"> <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="text-primary fw-bold">我們重視您的聲音</h2>
+                        <p class="text-muted">您的滿意是文藻小咖啡進步的動力，歡迎填寫表單給予建議。</p>
+                    </div>
+
+                    <div class="card shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="feedbackForm">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingName" placeholder="您的姓名" required>
+                                            <label for="floatingName">您的姓名</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                                            <label for="floatingEmail">電子郵件</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="意見類型選擇">
+                                        <option selected>請選擇您想反應的項目...</option>
+                                        <option value="1">☕ 飲品口味建議</option>
+                                        <option value="2">💁 服務態度回饋</option>
+                                        <option value="3">🧹 環境整潔與氛圍</option>
+                                        <option value="4">💡 其他建議</option>
+                                    </select>
+                                    <label for="floatingSelect">意見類型</label>
+                                </div>
+
+                                <div class="form-floating mb-4">
+                                    <textarea class="form-control" placeholder="請在此輸入您的寶貴意見" id="floatingTextarea" style="height: 150px" required></textarea>
+                                    <label for="floatingTextarea">請告訴我們您的想法...</label>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg rounded-pill" type="submit">
+                                        送出意見
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+   
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 文藻小咖啡 Wenzao Cafe. All Rights Reserved.</p>
+            <p class="mb-0"><small>專為文藻師生提供服務。</small></p>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,81 @@
+// src/assets/scss/custom.scss
+
+// 1. 引入 Functions (這是唯一建議優先引入的，用於計算顏色對比等)
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// ==========================================================
+// 2. ⭐️ 覆寫變數 (Override Variables)
+// 在引入 Main Bootstrap 之前定義，這樣 Bootstrap 就會使用您的顏色
+// ==========================================================
+
+// 核心品牌色
+$primary:       #6F4E37; // 深咖啡色
+$secondary:     #B08968; // 奶茶色
+$success:       #4B8C4B; 
+$light:         #F7F3E8; 
+$dark:          #342E2C; 
+
+// 字體與圓角設定
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif;
+$card-border-radius: 0.75rem;
+$border-radius: 0.5rem;
+
+// ==========================================================
+// 3. 引入 Bootstrap 主體
+// 這會自動將上面的變數套用到所有的 Components 中
+// ==========================================================
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// ==========================================================
+// 4. 自訂樣式 (Custom Styles)
+// ==========================================================
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#heroCarousel .carousel-item {
+    height: 80vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+    border-radius: $border-radius;
+    h1, p {
+        color: white; 
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+}
+
+// 強制覆蓋 navbar-dark 背景 (雖然 $dark 變數應該已經生效)
+.navbar-dark {
+    background-color: $dark !important; 
+}
+
+// ... 原本的 CSS ...
+
+// 優化疊圖區域的空間，避免手機版太擠
+.image-stack-container {
+    position: relative;
+    // 在手機版時，取消右側和底部的留白，讓圖片填滿
+    @include media-breakpoint-down(md) {
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+// 字元間距微調 (用於小標題 HERITAGE & EXCELLENCE)
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
